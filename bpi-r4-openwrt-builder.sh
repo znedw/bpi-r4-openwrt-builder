@@ -5,10 +5,10 @@ rm -rf openwrt
 rm -rf mtk-openwrt-feeds
 
 git clone --branch openwrt-24.10 https://git.openwrt.org/openwrt/openwrt.git openwrt
-cd openwrt; git checkout 5774c8b316eff80070775ee695d998ad3ee828d1; cd -;		#mediatek: add Motorcomm PHY support to Cudy AP3000 v1
+cd openwrt; git checkout 77d54cca84ffbb7754d592712ee96b0fcbff0d92; cd -;		#jsonfilter: fix memory leak in jsonfilter
 
 git clone --branch master https://git01.mediatek.com/openwrt/feeds/mtk-openwrt-feeds
-cd mtk-openwrt-feeds; git checkout e85f8374bdffb1ebd0d1c0822c5c3992d1201f49; cd -;	#[25.12][common][optee][add rust build support for OP-TEE TA/host]
+cd mtk-openwrt-feeds; git checkout 1823bb66e40b3a5db7b0a8b26e7022c074fbe3f2; cd -;	#[MAC80211][kernel-6.6/kernel-6.12][wed][Add WED version3 support RROQM bypass wo]
 
 ### wireless-regdb modification - this remove all regdb wireless countries restrictions
 #rm -rf openwrt/package/firmware/wireless-regdb/patches/*.*
